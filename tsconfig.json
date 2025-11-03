@@ -10,7 +10,16 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node", "react", "react-native"]
+    "types": [
+      "node",
+      "react",
+      "react-native"
+    ]
   },
-  "include": ["src", "App.tsx", "index.tsx"]
+  "include": [
+    "src",
+    "App.tsx",
+    "index.tsx"
+  ],
+  "extends": "expo/tsconfig.base"
 }
