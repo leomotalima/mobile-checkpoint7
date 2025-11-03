@@ -1,6 +1,7 @@
 import { createContext, PropsWithChildren, useState } from "react";
 import client from "../api";
 import { Student, Students } from "../types/users";
+import { User } from "../types/users";
 
 type StudentContextProps = {
   isLoading: boolean;

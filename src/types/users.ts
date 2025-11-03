@@ -10,4 +10,13 @@ type User = {
   gender?: string;
 };
 
-export type { User };
+type Student = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+type Students = Student[];
+
+export type { User, Student, Students };
