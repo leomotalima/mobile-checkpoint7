@@ -185,8 +185,3 @@ Este projeto foi desenvolvido como parte da disciplina **Mobile Application Deve
 *(Adicione prints das telas Login e Cadastro conforme demonstrado nos testes.)*
 
 ---
-
-## Autor
-
-**Léo Mota Lima (RM557851)**  
-[github.com/leomotalima](https://github.com/leomotalima)
