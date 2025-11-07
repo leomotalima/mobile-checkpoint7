@@ -2,7 +2,7 @@
 
 ## Projeto: Aplicativo de Gerenciamento Escolar com Localização Automática
 
-**Aluno:** Léo Mota Lima — RM557851  
+**Aluno:** Léo Mota Lima — RM557851 - Turma: 2TDSB  
 **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas  
 **Disciplina:** Mobile Application Development  
 **Professor:** Leonardo Marques Barra Bragatti  
