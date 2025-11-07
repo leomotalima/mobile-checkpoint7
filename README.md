@@ -140,14 +140,32 @@ Escaneie o QR Code com o aplicativo **Expo Go** (disponível na Google Play Stor
 ## Diagrama de Fluxo Simplificado
 
 ```mermaid
-flowchart LR
-    A[Usuário] --> B[Expo App]
-    B --> C[Firebase Authentication]
-    B --> D[Firestore Database]
-    B --> E[Expo Location]
-    E --> F[Mapbox API]
-    F --> B
-    D --> G[Tela do Usuário]
+flowchart TB
+    subgraph Nivel1["Nível 1: Usuário"]
+        A[Usuário]
+    end
+
+    subgraph Nivel2["Nível 2: Aplicativo (Expo / React Native)"]
+        B[Interface do App]
+        C[Contextos: AuthContext / StudentContext]
+    end
+
+    subgraph Nivel3["Nível 3: Serviços Externos"]
+        D[Firebase Authentication]
+        E[Firebase Firestore]
+        F[Expo Location]
+        G[Mapbox API]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    F --> G
+    G --> C
+    E --> B
+
 ```
 
 ---
