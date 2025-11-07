@@ -4,10 +4,6 @@ import { Button, Surface, Text, TextInput, IconButton, ActivityIndicator } from 
 import { StyleSheet, View } from "react-native";
 import * as Location from 'expo-location';
 
-
-
-
-
 const Config = () => {
   const { user, logout, editAccount } = useContext(AuthContext);
 
