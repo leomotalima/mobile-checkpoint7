@@ -4,17 +4,15 @@ import { Student, Students } from "../types/students";
 
 type StudentContextProps = {
   isLoading: boolean;
-  users?: Students;
-  fetch: () => void;
-  save: (student: Student) => void;
+  users: Students;
+  fetch: () => Promise<void>;
+  save: (student: Student) => Promise<void>;
 };
 
-const StudentContext = createContext<StudentContextProps>(
-  {} as StudentContextProps
-);
+const StudentContext = createContext<StudentContextProps>({} as StudentContextProps);
 
 const StudentProvider = ({ children }: PropsWithChildren) => {
-  const [users, setUsers] = useState<Students>();
+  const [users, setUsers] = useState<Students>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetch = async () => {
@@ -33,6 +31,7 @@ const StudentProvider = ({ children }: PropsWithChildren) => {
       lastName: student.lastName,
       email: student.email,
     });
+    setUsers(prev => [...prev, student]);
   };
 
   return (
